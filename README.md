@@ -2,11 +2,20 @@
 
 A Python utility library for geometry and physics calculations.
 
-## Structure
+## File Directory
 
-* `geom.py` - Math constants and geometric calculations (area, volume, surface area).
-* `mechanics.py` - Core mechanics formulas (kinematics, center of mass, system acceleration, gravity).
-
+```text
+mathformulas/
+│
+├── src/                 
+│   ├── geom.py  
+│   └── mechanics.py
+│    
+├─ .gitignore
+├─ LICENSE
+├─ README.md
+└─ requirements.txt
+```
 ## Example
 
 ```python
