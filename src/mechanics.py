@@ -1,11 +1,15 @@
-import numpy
+import numpy as np
 import geom
+
+# #1
 
 
 def find_instantaneous_velocity(initial_velocity, acceleration, time):
 
     v_x = initial_velocity + (acceleration * time)
     return v_x
+
+# #2
 
 
 def find_position(inital_position, initial_velocity, time, current_acceleration):
@@ -14,6 +18,8 @@ def find_position(inital_position, initial_velocity, time, current_acceleration)
         ((1/2)*current_acceleration*(time**2))
     return x
 
+# #3
+
 
 def find_velocity_squared(initial_velocity, acceleration, current_position, initial_position=0):
     v_x_squared = initial_velocity**2 + 2 * \
@@ -21,6 +27,8 @@ def find_velocity_squared(initial_velocity, acceleration, current_position, init
     return v_x_squared
 
 # example: [["Ball", 2, 5, forceof10righthere],["Block", 4, 6, forceof8righthere]]
+
+# #4
 
 
 def center_of_mass(list_of_object_lists):
@@ -32,6 +40,8 @@ def center_of_mass(list_of_object_lists):
 
     center_of_mass = float(top_part/total_mass)
     return center_of_mass
+
+# #5
 
 
 def total_acceleration(list_of_object_lists):
@@ -45,12 +55,48 @@ def total_acceleration(list_of_object_lists):
     total_acceleration = top_part/bottom_part
     return total_acceleration
 
+# #6
+
 
 def newtons_law_of_universal_gravitation(mass1, mass2, radius):
     attractive_force = geom.gravity_m3 * ((mass1 * mass2)/(radius**2))
     return attractive_force
 
+# #10
+
 
 def kinetic_energy(mass, velocity):
     KE = (1/2) * mass * (velocity**2)
     return KE
+
+# #11
+
+
+def work(force, distance, angle):
+
+    if isinstance(angle, float) or isinstance(angle, int):
+        angle = np.radians(angle)
+
+    work = (force * distance) * np.cos(angle)
+    return work
+
+# #12
+
+
+def delta_ke(*work):
+    return sum(work)
+
+# #16
+
+
+def momentum(mass, velocity):
+    momentum = mass * velocity
+
+    return momentum
+
+# #9
+
+
+def centripetal_acceleration(velocity, radius):
+    centripetal_acceleration = (velocity**2)/radius
+    return centripetal_acceleration
