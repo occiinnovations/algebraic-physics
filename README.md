@@ -1,13 +1,17 @@
 # algebraic-physics
 
-A Python utility library for geometry and physics calculations.
+A Python utility library for geometry and physics calculations based on the AP Physics 1 curriculum.
+
+This library provides automated functions to solve for unknown variables using standard introductory mechanics equations. It accepts numerical inputs for known physical quantities to compute values across kinematics, dynamics, energy, momentum, and rotational motion.
 
 ## File Directory
 
 ```text
 mathformulas/
 │
-├── src/                 
+├─ assets/... 
+│
+├─ src/                 
 │   ├── geom.py  
 │   └── mechanics.py
 │    
@@ -16,6 +20,7 @@ mathformulas/
 ├─ README.md
 └─ requirements.txt
 ```
+
 ## Example
 
 ```python
@@ -34,6 +39,10 @@ objects = [
 cm = mechanics.center_of_mass(objects)
 ```
 
-## Requirements
+## Source Formulas
 
-* NumPy
+[**PDF Link**](https://apcentral.collegeboard.org/media/pdf/ap-physics-1-equations-sheet.pdf)
+
+![Mechanics and Fluids](assets\formulas.png)
+
+![Geometry/Conversion](assets\geometry.png)
