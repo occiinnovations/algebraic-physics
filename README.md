@@ -41,7 +41,7 @@ cm = mechanics.center_of_mass(objects)
 
 ## Note
 
-Soon I will be merging this repo with shapeshift repo.
+Soon I will be merging this repo with shapeshift repo. (<https://github.com/occiinnovations/ShapeshiftPy>)
 
 ## Source Formulas
 
