@@ -39,6 +39,10 @@ objects = [
 cm = mechanics.center_of_mass(objects)
 ```
 
+## Note
+
+Soon I will be merging this repo with shapeshift repo.
+
 ## Source Formulas
 
 [**PDF Link**](https://apcentral.collegeboard.org/media/pdf/ap-physics-1-equations-sheet.pdf)
