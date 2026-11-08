@@ -5,15 +5,20 @@ gravity_m3 = 6.67 * 10**-11
 one_atm = 1.0 * 10**5
 
 
-def RectangleArea(length, width):
+def rectangleArea(length, width):
     return length * width
 
 
-def TriangleArea(base, height):
+def cube_volume(side_length):
+    volume = side_length**3
+    return volume
+
+
+def triangleArea(base, height):
     return 0.5 * base * height
 
 
-def Circle(radius):
+def circle(radius):
     area = np.pi * (radius**2)
     circumference = 2 * np.pi * radius
 

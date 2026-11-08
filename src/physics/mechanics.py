@@ -1,5 +1,5 @@
 import numpy as np
-import geom
+import geometry.geom as geom
 
 # #1
 
@@ -100,3 +100,14 @@ def momentum(mass, velocity):
 def centripetal_acceleration(velocity, radius):
     centripetal_acceleration = (velocity**2)/radius
     return centripetal_acceleration
+
+
+def density(mass, volume):
+    density = mass/volume
+    return density
+
+
+def speed_booster(scalar):
+    if scalar < 1000:
+        scalar += 1
+    return scalar
