@@ -14,21 +14,21 @@ mathformulas/
 │       └── codeql.yml
 │
 ├── assets/
-│   └── ...
+│   ├── formulas.png
+│   └── geometry.png
 │
 ├── src/
 │   ├── geometry/
-│   │   ├── __pycache__/
+│   │   ├── __init__.py
 │   │   └── geom.py
 │   │
 │   └── physics/
-│       ├── __pycache__/
+│       ├── __init__.py
 │       └── mechanics.py
 │
 ├── tests/
 │   └── make_cube.py
 │
-├── .env
 ├── .gitignore
 ├── LICENSE
 ├── pyproject.toml
