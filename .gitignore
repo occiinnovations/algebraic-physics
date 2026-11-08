@@ -3,4 +3,5 @@ __pycache__/
 .vscode/
 .DS_Store
 .env
-*.egg-info/
+**/*.egg-info/
+src/mathformulas.egg-info/
