@@ -6,6 +6,7 @@ This library provides automated functions to solve for unknown variables using s
 
 ## File Directory
 
+```text
 mathformulas/
 │
 ├── .github/
@@ -35,6 +36,7 @@ mathformulas/
 ├── pyproject.toml
 ├── README.md
 └── requirements.txt
+```
 
 ## Example
 
