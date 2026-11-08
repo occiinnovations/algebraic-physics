@@ -21,11 +21,9 @@ mathformulas/
 │   │   ├── __pycache__/
 │   │   └── geom.py
 │   │
-│   ├── physics/
-│   │   ├── __pycache__/
-│   │   └── mechanics.py
-│   │
-│   └── mathformulas.egg-info/
+│   └── physics/
+│       ├── __pycache__/
+│       └── mechanics.py
 │
 ├── tests/
 │   └── make_cube.py
