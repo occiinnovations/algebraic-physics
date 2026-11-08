@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mathformulas"
+name = "algebraic-physics"
 version = "0.1.0"
 description = "A project for math and geometry formulas"
 readme = "README.md"
