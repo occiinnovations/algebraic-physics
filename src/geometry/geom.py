@@ -5,7 +5,7 @@ gravity_m3 = 6.67 * 10**-11
 one_atm = 1.0 * 10**5
 
 
-def rectangleArea(length, width):
+def rectangle_area(length, width):
     return length * width
 
 
@@ -14,7 +14,7 @@ def cube_volume(side_length):
     return volume
 
 
-def triangleArea(base, height):
+def triangle_area(base, height):
     return 0.5 * base * height
 
 
