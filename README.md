@@ -38,7 +38,7 @@ mathformulas/
 └── requirements.txt
 ```
 
-## Example
+## Tests Example
 
 The file 'make_cube.py' under tests/ utilizes a dictionary for holding shapes. The square uses 0.0 floats, and relies on mechanics.py functions for calculations.
 
@@ -86,8 +86,6 @@ while time < max_time:
 
 ## Source Formulas
 
-[__PDF Link__](https://apcentral.collegeboard.org/media/pdf/ap-physics-1-equations-sheet.pdf)
+![Mechanics and Fluids](assets/formulas.png)
 
-![Mechanics and Fluids](assets\formulas.png)
-
-![Geometry/Conversion](assets\geometry.png)
+![Geometry/Conversion](assets/geometry.png)
