@@ -4,6 +4,15 @@ A Python utility library for geometry and physics calculations based on the AP P
 
 This library provides automated functions to solve for unknown variables using standard introductory mechanics equations. It accepts numerical inputs for known physical quantities to compute values across kinematics, dynamics, energy, momentum, and rotational motion.
 
+## Installation
+
+Install the library via [PyPI](https://pypi.org):
+
+```bash
+pip install algebraic-physics
+```
+
+
 ## File Directory
 
 ```text
