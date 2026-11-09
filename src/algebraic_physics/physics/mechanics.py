@@ -1,5 +1,5 @@
 import numpy as np
-import geometry.geom as geom
+from ..geometry.geom import *
 
 # #1
 
@@ -12,9 +12,9 @@ def find_instantaneous_velocity(initial_velocity, acceleration, time):
 # #2
 
 
-def find_position(inital_position, initial_velocity, time, current_acceleration):
+def find_position(initial_position, initial_velocity, time, current_acceleration):
 
-    x = inital_position + (initial_velocity*time) + \
+    x = initial_position + (initial_velocity*time) + \
         ((1/2)*current_acceleration*(time**2))
     return x
 
@@ -59,7 +59,7 @@ def total_acceleration(list_of_object_lists):
 
 
 def newtons_law_of_universal_gravitation(mass1, mass2, radius):
-    attractive_force = geom.gravity_m3 * ((mass1 * mass2)/(radius**2))
+    attractive_force = gravity_m3 * ((mass1 * mass2)/(radius**2))
     return attractive_force
 
 # #10
@@ -111,3 +111,8 @@ def speed_booster(scalar):
     if scalar < 1000:
         scalar += 1
     return scalar
+
+
+def find_mass(density, volume):
+    mass = density * volume
+    return mass
