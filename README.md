@@ -4,6 +4,8 @@ A Python utility library for geometry and physics calculations based on the AP P
 
 This library provides automated functions to solve for unknown variables using standard introductory mechanics equations. It accepts numerical inputs for known physical quantities to compute values across kinematics, dynamics, energy, momentum, and rotational motion.
 
+The file 'make_cube.py' under tests/ utilizes a while loop for creating a new cube every second. There is an 'active_objects' list for holding shapes. 'aps' is used for accessing library functions. The library does contain a materials list.
+
 ## Installation
 
 Install the library via [PyPI](https://pypi.org):
@@ -42,48 +44,59 @@ mathformulas/
 
 ## Tests Example
 
-The file 'make_cube.py' under tests/ utilizes a dictionary for holding shapes. The square uses 0.0 floats, and relies on mechanics.py functions for calculations.
+### Example 1 - Object Creation
+
+```python
+@dataclass # Dataclass system
+class MakeACube:
+
+    name: str               # Naming
+    material: str           # Material choice; each choice gives a density
+    side: float = 0.0       # side_length used for volume calculation
+
+    volume: float = 0.0
+    mass: float = 0.0
+
+    pos_x: float = 0.0
+    pos_y: float = 0.0
+    pos_z: float = 0.0 # Z Axis Added
+
+    velocity_x: float = 0.0
+    velocity_y: float = 0.0
+    velocity_z: float = 0.0
+
+    def __post_init__(self):
+
+        self.volume = cube_volume(self.side)            # Cube Volume is side_length **3
+        self.mass = round(
+            find_mass(MATERIALS[self.material], self.volume) # find_mass = material density * volume
+                            ,4)
+```
+
+### Example 2 - Logic of Simulation in 'make_cube.py'
 
 ```python
 #make_cube.py
-import geometry.geom as gm
-import physics.mechanics as pm
+import algebraic-physics as aps
 
-my_cube = {
-    "side": 4,    # Side length, note that this can be subbed out for the result of a distance formula between two coordinates
-    "mass": 10,   # Dummy mass
-    "volume": 0, 
+active_objects = []
 
-    "pos_x": 0.0, # Starts at coordinates (0,0)
-    "pos_y": 0.0,
+... 
 
-    "velocity_x": 0.0,
-    "velocity_y": 0.0,
-}
+while time < max_time:
+
+    if round(time, 1) % 1.0 == 0.0:
+        unique_name = f"cube {cube_id_counter}"
+
+        my_new_cube = aps.MakeACube(   #<<<------ Cube Named 'my_new_cube' 
+            name=unique_name, 
+            side=5.0, 
+            material="oxygen"
+            )
+
+        active_objects.append(my_new_cube)   #Added to 'active_objects', which undergoes a for loop for physics calculations
+        print(f"Spawned: {my_new_cube.name}")
 ...
-
-# Volume Calculation:
-my_cube["volume"] = gm.cube_volume(my_cube["side"])
-print(f'The volume is {my_cube["volume"]}')
-
-...
-
-# Physics Simulation:
-dt = 0.1                            # Timestep
-time = 0.0                          # Time that increases according to timestep
-max_time = 5.0                      # Dummy max_time, in a real simulation this would be undeclared until input
-current_acceleration = 1.0          # Dummy current_acceleration 
-speedy_boost = pm.speed_booster(1)  # Connects to a speed boost function in 'mechanics.py'
-
-while time < max_time:  
-    current_acceleration = pm.speed_booster(current_acceleration)
-
-    my_cube["velocity_x"] = pm.find_instantaneous_velocity(
-        my_cube["velocity_x"],
-        speedy_boost,
-        dt
-    )
-    time += dt
 ```
 
 ## Source Formulas
