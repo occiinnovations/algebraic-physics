@@ -12,7 +12,6 @@ Install the library via [PyPI](https://pypi.org):
 pip install algebraic-physics
 ```
 
-
 ## File Directory
 
 ```text
@@ -20,24 +19,20 @@ mathformulas/
 │
 ├── .github/
 │   └── workflows/
-│       └── codeql.yml
 │
 ├── assets/
-│   ├── formulas.png
-│   └── geometry.png
+├── dist/
 │
 ├── src/
-│   ├── geometry/
-│   │   ├── __init__.py
-│   │   └── geom.py
-│   │
-│   └── physics/
-│       ├── __init__.py
-│       └── mechanics.py
+│   └── algebraic_physics/
+│       ├── geometry/
+│       ├── physics/
+│       └── __init__.py
 │
 ├── tests/
 │   └── make_cube.py
 │
+├── .env
 ├── .gitignore
 ├── LICENSE
 ├── pyproject.toml
