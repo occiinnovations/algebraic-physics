@@ -1,52 +1,39 @@
-import geometry.geom as gm
-import physics.mechanics as pm
+import algebraic_physics as aps
 
 dt = 0.1
 time = 0.0
 max_time = 5.0
 current_acceleration = 1.0
-speedy_boost = pm.speed_booster(1)
+speedy_boost = aps.speed_booster(1)
 
-my_cube = {
-    "side": 4,
-    "mass": 10,
-    "volume": 0,
-
-    "pos_x": 0.0,
-    "pos_y": 0.0,
-
-    "velocity_x": 0.0,
-    "velocity_y": 0.0,
-
-
-
-}
-
-print("Simulation Begin:")
-
-my_cube["volume"] = gm.cube_volume(my_cube["side"])
-print(f'The volume is {my_cube["volume"]}')
+cube_id_counter = 1
+active_objects = []
 
 while time < max_time:
-    current_acceleration = pm.speed_booster(current_acceleration)
 
-    my_cube["velocity_x"] = pm.find_instantaneous_velocity(
-        my_cube["velocity_x"],
-        speedy_boost,
-        dt
-    )
+    if round(time, 1) % 1.0 == 0.0:
+        unique_name = f"cube {cube_id_counter}"
 
-    my_cube["pos_x"] = pm.find_position(
-        my_cube["pos_x"],
-        my_cube["velocity_x"],
-        time,
-        current_acceleration
-    )
+        my_new_cube = aps.MakeACube(
+            name=unique_name, side=5.0, material="oxygen")
+        print(my_new_cube)
 
-    print(
-        f'Position of object: {my_cube["pos_x"]}; Velocity of object: {my_cube["velocity_x"]}'
-    )
+        active_objects.append(my_new_cube)
+        print(f"Spawned: {my_new_cube.name}")
+
+        cube_id_counter += 1
+
+    current_acceleration = aps.speed_booster(current_acceleration)
+
+    for obj in active_objects:
+        obj.pos_y = round(aps.find_position(
+            obj.pos_y, obj.velocity_y, dt, current_acceleration), 3)
+
+        obj.velocity_y = round(aps.find_instantaneous_velocity(
+            obj.velocity_y, current_acceleration, dt), 3)
+
     time += dt
 
-print("Simulation Done")
-print(my_cube)
+print("Final Items:")
+for item in active_objects:
+    print(item)
