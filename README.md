@@ -77,7 +77,7 @@ class MakeACube:
 
 ```python
 #make_cube.py
-import algebraic-physics as aps
+import algebraic_physics as aps
 
 active_objects = []
 
