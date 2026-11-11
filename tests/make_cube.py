@@ -9,6 +9,8 @@ speedy_boost = aps.speed_booster(1)
 cube_id_counter = 1
 active_objects = []
 
+print("Starting Sim")
+
 while time < max_time:
 
     if round(time, 1) % 1.0 == 0.0:
@@ -26,11 +28,11 @@ while time < max_time:
     current_acceleration = aps.speed_booster(current_acceleration)
 
     for obj in active_objects:
-        obj.pos_y = round(aps.find_position(
-            obj.pos_y, obj.velocity_y, dt, current_acceleration), 3)
+        obj.pos_x = round(aps.find_position(
+            obj.pos_x, obj.velocity_x, dt, current_acceleration), 3)
 
-        obj.velocity_y = round(aps.find_instantaneous_velocity(
-            obj.velocity_y, current_acceleration, dt), 3)
+        obj.velocity_x = round(aps.find_instantaneous_velocity(
+            obj.velocity_x, current_acceleration, dt), 3)
 
     time += dt
 

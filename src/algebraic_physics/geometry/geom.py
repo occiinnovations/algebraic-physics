@@ -25,7 +25,7 @@ def circle(radius):
     return area, circumference
 
 
-def rectangular_solid(length, width, height):
+def rectangular_volume(length, width, height):
     volume = length * width * height
 
     return volume
@@ -38,7 +38,7 @@ def cylinder(radius, length):
     return volume, surface_area
 
 
-def sphere(radius):
+def sphere_volume(radius):
     volume = 4/3 * np.pi * (radius**3)
     surface_area = 4 * np.pi * (radius**2)
     return volume, surface_area
