@@ -8,7 +8,7 @@ The file 'make_cube.py' under tests/ utilizes a while loop for creating a new cu
 
 ## Installation
 
-Install the library via [PyPI](https://pypi.org):
+Install the library via [PyPI](https://pypi.org/project/algebraic-physics/):
 
 ```bash
 pip install algebraic-physics
