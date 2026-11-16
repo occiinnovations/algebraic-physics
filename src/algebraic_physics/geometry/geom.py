@@ -52,3 +52,17 @@ def arc_relations(r, theta):
 def pythag(side1, side2):
     side3 = (side1**2 + side2**2)**(1/2)
     return side3
+
+
+def xy_distance_formula(point1, point2):  # use tuples or lists for this
+
+    distance = np.sqrt((point2[0] - point1[0])**2 + (point2[1] - point1[1])**2)
+    return distance
+
+
+def xyz_distance_formula(point1, point2):
+    distance = np.sqrt((point2[0] - point1[0])**2 +
+                       (point2[1] - point1[1])**2 +
+                       (point2[2] - point1[2])**2
+                       )
+    return distance
