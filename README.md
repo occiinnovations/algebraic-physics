@@ -1,6 +1,6 @@
 # algebraic-physics
 
-A Python utility library for geometry and physics calculations based on the AP Physics 1 curriculum.
+A Python utility library for geometry and physics calculations.
 
 This library provides automated functions to solve for unknown variables using standard introductory mechanics equations. It accepts numerical inputs for known physical quantities to compute values across kinematics, dynamics, energy, momentum, and rotational motion.
 
