@@ -28,6 +28,7 @@ mathformulas/
 ├── src/
 │   └── algebraic_physics/
 │       ├── geometry/
+│       ├── vectors/
 │       ├── physics/
 │       └── __init__.py
 │
