@@ -43,7 +43,7 @@ mathformulas/
 └── requirements.txt
 ```
 
-## Tests Example
+## Tests Examples
 
 ### Example 1 - Object Creation
 
@@ -89,7 +89,7 @@ while time < max_time:
     if round(time, 1) % 1.0 == 0.0:
         unique_name = f"cube {cube_id_counter}"
 
-        my_new_cube = aps.MakeACube(   #<<<------ Cube Named 'my_new_cube' 
+        my_new_cube = aps.MakeACube(
             name=unique_name, 
             side=5.0, 
             material="oxygen"
@@ -98,6 +98,14 @@ while time < max_time:
         active_objects.append(my_new_cube)   #Added to 'active_objects', which undergoes a for loop for physics calculations
         print(f"Spawned: {my_new_cube.name}")
 ...
+```
+
+## Example 3 -  Speed Booster
+
+```python
+current_acceleration = aps.speed_booster(current_acceleration) 
+
+#calls the function "speed_booster" which accepts an int or value and applies to a direction 
 ```
 
 ## Source Formulas
