@@ -100,7 +100,7 @@ while time < max_time:
 ...
 ```
 
-## Example 3 -  Speed Booster
+### Example 3 -  Speed Booster
 
 ```python
 current_acceleration = aps.speed_booster(current_acceleration) 
