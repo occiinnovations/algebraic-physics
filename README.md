@@ -28,7 +28,7 @@ mathformulas/
 ├── src/
 │   └── algebraic_physics/
 │       ├── geometry/
-│       ├── vectors/
+│       ├── lin_alg/
 │       ├── physics/
 │       └── __init__.py
 │
