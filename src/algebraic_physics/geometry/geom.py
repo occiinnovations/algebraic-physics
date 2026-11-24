@@ -66,3 +66,32 @@ def xyz_distance_formula(point1, point2):
                        (point2[2] - point1[2])**2
                        )
     return distance
+
+
+def side_amounts(angle_points):
+    side_lengths_of_shape = []
+    count = 0
+    first_point = angle_points[0]
+    final_point = ()
+    for point in angle_points:
+        this_side_length = 0
+
+        if count > 0:
+            this_side_length = xyz_distance_formula(using_point, point)
+        count += 1
+
+        try:
+            side_lengths_of_shape.append(
+                f"Side {count}; Joins {using_point} to {point}; Length = {this_side_length}")
+        except:
+            pass
+        using_point = point
+        final_point = point
+
+    if angle_points[0] != angle_points[-1]:
+
+        final_side = xyz_distance_formula(final_point, first_point)
+        count += 1
+        side_lengths_of_shape.append(
+            f"Final Side {count}; Joins {final_point} to {first_point}; Length = {final_side}")
+    return side_lengths_of_shape
